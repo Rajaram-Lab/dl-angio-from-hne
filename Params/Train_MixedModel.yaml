@@ -1,0 +1,15 @@
+---
+#  Data for training Mixed Model with Dice loss with Beta of 0.9
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/tcga/416PX_Tumor_Combined_All_Norm/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/"
+ mappingFile: "/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/TCGA_FFPE/FriendlyNamesMapping.csv"
+ pathwaysFile: "/project/shared/kapur_rajaram_no_phi/ProcessedData/AngioScore/10192022/TCGA_pathway_score_IMm150_approach_10192022.txt" 
+ foldsSaveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/TCGA_Magic_3Folds.pkl"
+ maskPatchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/cd31_hne_ihc_416_non_rigid/Masks_Final/"
+ test_files: ['11899.pkl','11895.pkl','10773.pkl']
+ cd31SaveDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/CD31_ResnetUNet_Dice/"
+ cd31File: "CD31_ResnetUNet_DiceCCE_A0.9_E9.pt"
+ patchSize: 416
+ nEpoch: 10
+ seedNum: 1
+ foldNum: 0 

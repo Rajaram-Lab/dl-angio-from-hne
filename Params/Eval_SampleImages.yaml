@@ -1,0 +1,3 @@
+---
+ modelFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/MixedSimple_UNetResnet_E7.pt"
+ imageDir: "Images/SampleImages/"

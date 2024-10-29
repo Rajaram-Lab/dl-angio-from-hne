@@ -1,0 +1,10 @@
+---
+#  this is for evaluating Unet Model on UTSeq Dataset
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/Pilot/416PX_ColorNormalized/"
+ huaPathwayFile: "/project/shared/kapur_rajaram_no_phi/ProcessedData/AngioScore/10192022/Pilot_pathway_score_IMm150_approach_10192022.txt"
+ allSamplesFile: "/project/shared/kapur_rajaram_phi/Genomics_Pilot/Sample_annotation_batch_all_HZ_11232021-SR_v5.xlsx"
+ targetFile: "/project/bioinformatics/Rajaram_lab/shared/AngioPaper/AngioModel_TCGA_TargetRandPixels.npy"
+ saveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/Pilot/Unet_Test.csv"
+ patchSize: 416
+ modelsToEval: ['/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/CD31_ResnetUNet_Dice/CD31_ResnetUNet_DiceCCE_A0.9_E9.pt'] 
+ epochs: [9]    

@@ -1,0 +1,17 @@
+Data:
+  IMM150:
+    failedQcFiles: ['SLIDEab66bc691f_HE-2021-09-21.ndpi','SLIDEe3af7e923a_HE-2021-09-21.ndpi','SLIDEe51e9d72bb_HE-2021-09-17.ndpi']
+    duplicateFiles: ['SLIDEac7fd35ad3_HE-2021-11-09.ndpi','SLIDE914bcd5436_HE-2021-09-21.ndpi','SLIDE5219e95abf_HE-2021-09-20.ndpi',
+                'SLIDEcb0a642546_HE-2021-09-21.ndpi']
+
+
+Plotting:
+  methodColors: {'H&E DL Angio': [0.67, 0.14, 0.19],'RNA Angio': [0.4, 0.6, 0.8], 'CD31': [0.36,0.77,0.62] } 
+  highMedLowLineStyles: {'High': 'solid', 'Med': 'dotted', 'Low': 'dashed' }
+  methodNames: {'H&E Prediction': 'H&E DL Angio'}
+  saveDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/Paper_Figures/DPI_300_Draft1/"
+  
+  IMM150:
+    armNames: {'SUNITINIB':'Sunitinib', 'MPDL3280A AND BEVACIZUMAB':'Atezo + bev', 'MPDL3280A ALONE':'Atezo'}
+    armColors: {'Sunitinib':[[39,61,39],[98,151,98]], 'Atezo':[[215,104,39],[247,163,94]], 'Atezo + bev':[[111,57,149],[160,139,185]]}
+  

@@ -1,0 +1,8 @@
+---
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/imm150/416PX_ColorNormalized/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/"
+ epochs: [7]
+ starterFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/IMM150_EVAL/StarterFile_IMM150_Scores.csv"
+ starterColName: "ndpiFile"
+ saveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/IMM150/MixedModelTest.csv"
+ patchSize: 416

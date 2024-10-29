@@ -1,0 +1,57 @@
+---
+ statAnnotDir: "/project/bioinformatics/Rajaram_lab/shared/Environment/Shared_Code/statannot/"
+ statAnnotationDir: "/project/bioinformatics/Rajaram_lab/shared/Environment/Shared_Code/statannotations/" 
+# all_imm150_plots need the following
+ imm150_File: "All_IMM150_1.csv"
+ TCGA_CV_File: "TCGA_CV.csv"
+ utseq_res_file: "Pilot_res1.csv"
+ imm150_all_data: "All_IMM150_GNE_share.csv"
+#  data for Figure-1.py
+ Fig1SvsFiles: ['KC01792-T1-A2-Top-Redone.svs', 'KC02000-T1-B14-Flip-Redone.svs']
+ Fig1saveDir: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/AngioMasks/MultiBatch/'
+ Fig1maskDir: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/tumor_masks/Pilot/'
+ Fig1svsDir: '/project/shared/kapur_rajaram_no_phi/Data/GenomicsPilot/Images/Rescanned'
+ Fig1File2: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/Pilot_Eval/MM_PyT_Multi_Batch.csv'
+ Fig1TargetSlide: "/project/shared/kapur_rajaram_no_phi/Data/GenomicsPilot/Images/Batch1/HnE/KC01792-T1-A2-Top.svs"
+# data for Figure-2AB-FigS4.py
+ Fig2DataDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/IMM150/DataFiles/"
+# data for Fig3ABD-TMA-Grade-Stage-OS.py
+ Fig3GradesFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/All_TMA_Grades.csv'
+ Fig3StageFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/All_TMA_Stage.csv'
+ Fig3SurvivFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/All_TMA_Survival.csv' 
+# data for Fig3C-BAP1-PBRM1.py
+ Fig3YamlFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Code/TMA_Files/tma_Final_Analysis.yaml'
+# data for Fig4A-TKI-UTSW-Response.py
+ Fig4saveFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/UTSW_TKI_Data.csv'
+# data for Figure S2-IHC-Fig.py
+ FigS2PatchDir: '/project/bioinformatics/Rajaram_lab/shared/ccRCC/Patch_Data/IHC/cd31_ihc_unet_curated/'
+ FigS2AnnoDir: '/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/IHC_Cell_Types/QuPath_m5_CD31/annotations'
+ FigS2svsDir: '/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/IHC_Cell_Types/IHC'
+ FigS2ModelSaveFile: '/project/bioinformatics/Rajaram_lab/shared/Driver_Mutations_From_HnE/Models/IHC/UNet/CD31_IHC_UNet_base-400.h5'
+ FigS2AreaFracFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/Fig-1-IHC-Plot.csv"
+# data for FigureS3-CD31-IHC-HNE-3-images.py
+ FigS3ModelFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/MixedSimple_UNetResnet_E7.pt'
+ FigS3patchDir: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/cd31_hne_ihc_416_non_rigid/Masks_Final/'
+ FigS3TestFiles: ['11899.pkl','11895.pkl']
+ FigS3imgIndx: {'11899.pkl':[101,876],'11895.pkl':[20]}
+# data for FigS5-8-images.py
+ FigS5TargetFile: "/project/bioinformatics/Rajaram_lab/shared/AngioPaper/AngioModel_TCGA_TargetRandPixels.npy" 
+ FigS5File2: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/Pilot_Eval/MM_PyT_Multi_Batch.csv'
+ FigS5File1: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/Figure-8-Images.csv'
+ FigS5SvsDirList: ['/project/shared/kapur_rajaram_no_phi/Data/GenomicsPilot/Images/Batch1/HnE/',
+            '/project/shared/kapur_rajaram_no_phi/Data/GenomicsPilot/Images/Batch2/HnE/',
+            '/project/shared/kapur_rajaram_no_phi/Data/GenomicsPilot/Images/Batch3/']
+ FigS5ModelFile: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/MixedSimple_UNetResnet_E7.pt'
+# data for FigS7-Pilot-Ph1-Cd31-py
+ FigS7DataFile: "/project/bioinformatics/Rajaram_lab/shared/VirtualIHC/Figures/Pilot-results-area-GAN-P2P-1.csv"
+ FigS7File1: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/Pilot_Eval/MM_PyT_Multi_Batch.csv"
+# data for FigS9-TMA_TumSize-Sarcomatoid.py
+ FigS9TumorSizeFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/All_TMA_TumorSize.csv"
+ FigS9SarcomatoidFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Figures/All_TMA_Sarcomatoid.csv"
+# data for FigS10-ArchPatterns-PctPos.py
+ FigS10ResSaveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/Pilot/MultiBatch_E7_PyQT.csv"
+ FigS10PatternFile: "/project/shared/kapur_rajaram_no_phi/MetaData/GenomicsPilot/From Hua/Sample_annotation_batch_all_HZ_11232021-SR_v6_05252023_NO_PHI.xlsx"
+# data for FigS11-TCGA-OSurvival.py
+ FigS11AngioResFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/TCGA/MM_PyT_Multi_Batch_E7_TCGA_All.csv"
+ FigS11FriendlyMappingFile: "/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/TCGA_FFPE/FriendlyNamesMapping.csv" 
+ FigS11TCGASurvivalFile: "/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/TCGA_FFPE_Genes/kirc_tcga_pan_can_atlas_2018/data_clinical_patient.txt"

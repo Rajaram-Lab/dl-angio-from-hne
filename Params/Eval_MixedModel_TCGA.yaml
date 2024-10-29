@@ -1,0 +1,9 @@
+---
+#  this is for evaluating Mixed Model on TCGA ValidationSet
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/tcga/416PX_Tumor_Combined_All_Norm/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/"
+ epochs: [7]
+ starterFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/VGG19_Magic3Fold_0.csv"
+ starterColName: "SVS"
+ saveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/TCGA/EvalMixedModelTest.csv"
+ patchSize: 416

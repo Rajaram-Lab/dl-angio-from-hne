@@ -1,0 +1,9 @@
+---
+#  this is for evaluating ResNet model on UTSeq dataset
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/Pilot/224PX_20X_Normalized/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/Enc_PyT_F0S1_Aug1324/"
+ epochs: [6]
+ huaPathwayFile: "/project/shared/kapur_rajaram_no_phi/ProcessedData/AngioScore/10192022/Pilot_pathway_score_IMm150_approach_10192022.txt"
+ allSamplesFile: "/project/shared/kapur_rajaram_phi/Genomics_Pilot/Sample_annotation_batch_all_HZ_11232021-SR_v5.xlsx"
+ targetFile: "/project/bioinformatics/Rajaram_lab/shared/AngioPaper/AngioModel_TCGA_TargetRandPixels.npy"
+ saveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/PyT_Evaluations/Pilot/Encoder_Aug1324_FcTest.csv"

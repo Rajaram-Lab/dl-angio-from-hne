@@ -1,0 +1,8 @@
+---
+ modelFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/MixedSimple_UNetResnet_E7.pt"
+ slidesJ: ['200430', '200431',  '200432']
+ slidesV: ['1003652','1003653','1003655','1003656','1003657','1003660','1003661','1003662',
+         '103658_Redone','1003664_10332_Redone','103654-A_Redone','103654-B_Redone']
+ patchSaveDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/tma/416PX_ColorNormalized/"
+ scoreSaveFileJ: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/TMA_EVAL/J145AngioScoresTest.csv"
+ scoreSaveFileV: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/TMA_EVAL/VitalyAngioScoresTest.csv"

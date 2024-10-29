@@ -1,0 +1,13 @@
+---
+#  Train ResNet18 model Model_Type is 0, 1, 2.  0 For training entire ResNet, 1 for training only FC layer, 
+#  2 for training FC+last Convolution Layer while keeping rest of the layers frozen.
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/tcga/224PX_Tumor_Combined_All_Norm/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/"
+ mappingFile: "/project/bioinformatics/Rajaram_lab/shared/ccRCC/Images/ccRcc_images/TCGA_FFPE/FriendlyNamesMapping.csv"
+ pathwaysFile: "/project/shared/kapur_rajaram_no_phi/ProcessedData/AngioScore/10192022/TCGA_pathway_score_IMm150_approach_10192022.txt" 
+ foldsSaveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/TCGA_Magic_3Folds.pkl"
+ modelType: 0
+ patchSize: 224
+ nEpoch: 10
+ seedNum: 1
+ foldNum: 0 

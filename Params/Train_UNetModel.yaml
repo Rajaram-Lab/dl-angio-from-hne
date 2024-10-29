@@ -1,0 +1,7 @@
+---
+#  Train CD31 UNet model..
+ patchDir: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/cd31_hne_ihc_416_non_rigid/Masks_Final/'
+ test_files: ['11899.pkl','11895.pkl','10773.pkl']
+ modelDir: '/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/'
+ patchSize: 416
+ nEpoch: 10

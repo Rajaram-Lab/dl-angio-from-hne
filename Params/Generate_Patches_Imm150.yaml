@@ -1,0 +1,11 @@
+---
+ dataType: "IMM150"
+ annoDir: "/project/shared/kapur_rajaram_no_phi/ProcessedData/VirtualIHC/IMM150/QP23-Genentech/annotations/"
+ svsDir: "/project/shared/kapur_rajaram_no_phi/Data/Genentech/IMM150/HnE/WO29074_UTSW_02192022/"
+ periTumorMaskDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/tumor_masks/IMM150_PeriTumor/"
+ tumorMaskDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/tumor_masks/IMM150_Tumor/"
+ patchSaveDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/imm150/224PX_20X_Tumor/" 
+ patchSize: 224
+ excludeList: ['SLIDEab66bc691f_HE-2021-09-21.ndpi','SLIDEe3af7e923a_HE-2021-09-21.ndpi','SLIDEe51e9d72bb_HE-2021-09-17.ndpi']
+ duplicateList: ['SLIDEac7fd35ad3_HE-2021-11-09.ndpi','SLIDE914bcd5436_HE-2021-09-21.ndpi','SLIDE5219e95abf_HE-2021-09-20.ndpi',       
+                'SLIDEcb0a642546_HE-2021-09-21.ndpi'] 

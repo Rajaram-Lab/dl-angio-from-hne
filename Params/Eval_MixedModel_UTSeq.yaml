@@ -1,0 +1,8 @@
+---
+ patchDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/patches/Pilot/416PX_ColorNormalized/"
+ modelDir: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Models/MM_PyT_Dice_MultiBatch/"
+ epochs: [7]
+ huaPathwayFile: "/project/shared/kapur_rajaram_no_phi/ProcessedData/AngioScore/10192022/Pilot_pathway_score_IMm150_approach_10192022.txt"
+ allSamplesFile: "/project/shared/kapur_rajaram_phi/Genomics_Pilot/Sample_annotation_batch_all_HZ_11232021-SR_v5.xlsx"
+ saveFile: "/project/shared/kapur_rajaram_no_phi/AngioPaper/Data/Model_Evaluations/400PX_Models/Pilot_Eval/MM_PyT_MultiBatch_Test.csv"
+ patchSize: 416
