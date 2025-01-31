@@ -156,8 +156,10 @@ dfMid = pd.DataFrame({'deceased_1':patientIsObserved[isMiddle],
 
 
 #%% Fig. 3D
-plt.figure(figsize=(10,10))
-fontSize=18
+plt.figure(figsize=(11,11))
+fontSize=20
+fontSize1=24
+axfontSize=18
 kmf = KaplanMeierFitter()
 low_num=np.sum(isLow)
 high_num=np.sum(isHigh)
@@ -173,12 +175,13 @@ kmf.fit(dfLow['ttd days'],dfLow['deceased_1'],label=(('Low Angio(N=')+str(dfLow.
 ax=kmf.plot(ci_show=False,color=pointColor,
             linestyle=globalParams['Plotting']['highMedLowLineStyles']['Low'],
             linewidth=3)
-plt.xlabel('Time (Years)',fontsize=fontSize)
-plt.ylabel('Overall Survival Probability',fontsize=fontSize)
+plt.tick_params(axis='both', which='major', labelsize=axfontSize)
+plt.xlabel('Time (Years)',fontsize=fontSize1)
+plt.ylabel('Overall Survival Probability',fontsize=fontSize1)
 
 plt.legend(prop={'size': fontSize})
 saveFile=os.path.join(saveDir,'Fig3d.png')
-plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
 plt.show()
 #%%get HR and pVal for two groups Need to put these values into the above plot once we determine how to do it
 #High .vs. low

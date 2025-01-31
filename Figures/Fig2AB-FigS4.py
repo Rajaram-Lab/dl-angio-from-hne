@@ -42,13 +42,14 @@ def is_number(n):
     except ValueError:
         return False
     return True
-
 def plot(x,y,xlable, ylable, titleS,xlabelColor,yLabelColor):                                                                                                                 
     markerSize=10                                                                                                                                     
-    fontSize=24                                                                                                                                       
-    isGood=(np.logical_and(np.isfinite(x),np.isfinite(y)))                                                                                            
+    fontSize=24
+    axfontSize=18                                                                                                                                       
+    isGood=(np.logical_and(np.isfinite(x),np.isfinite(y)))
     #plt.figure(figsize=(10,10))                                                                                                                       
-    plt.plot(x[isGood],y[isGood],'ok',markersize=markerSize)                                                                                          
+    plt.plot(x[isGood],y[isGood],'ok',markersize=markerSize) 
+    plt.tick_params(axis='both', which='major', labelsize=axfontSize)                                                                                         
     plt.xlabel(xlable,fontsize=fontSize,color=xlabelColor)                                                                                                              
     plt.ylabel(ylable,fontsize=fontSize,color=yLabelColor)                                                                                                              
     corr,p=Corr(x,y)                                                                                                    
@@ -56,6 +57,7 @@ def plot(x,y,xlable, ylable, titleS,xlabelColor,yLabelColor):
     l=plt.legend(title='Corr:'+str(round(corr,2))+'\np-val:'+('%.2E' % Decimal(p)),
                  fontsize=24)
     plt.setp(l.get_title(),fontsize=fontSize)
+
 # %%
 figuresYamlFile=os.path.join(codeDir,'Figures.yaml')
 with open(figuresYamlFile, "r") as f:
@@ -98,7 +100,7 @@ plot(tcgaRes['RNA_Angio'],tcgaRes['pctPos'],\
      'RNA Angioscore', predName,'TCGA Holdout',
      xlabelColor=methodColors['RNA Angio'],yLabelColor=methodColors[predName])
 saveFile=os.path.join(saveDir,'Fig2a.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
     
 #plt.subplot(1,3,2)
 plt.figure(figsize=(10,10))
@@ -106,7 +108,7 @@ plot(pilotRes['RNA_Angio'],pilotRes['pctPos'],'RNA Angioscore', \
      predName,'Pilot Data',
      xlabelColor=methodColors['RNA Angio'],yLabelColor=methodColors[predName])
 saveFile=os.path.join(saveDir,'Fig2b.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
 
 #%%  Supplementary Figure 4
 # 2 arm plots, correlation betweeb the arms for Supplementary Figures - TCGA first
@@ -116,7 +118,7 @@ plot(tcgaRes['RNA_Angio'],tcgaRes['Angio'],\
      'RNA Angioscore', 'Angio Arm Prediction','TCGA Holdout',
      xlabelColor=methodColors['RNA Angio'],yLabelColor=methodColors[predName])
 saveFile=os.path.join(saveDir,'FigS4-A1.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
    
 #plt.subplot(1,3,3)
 plt.figure(figsize=(10,10))
@@ -124,7 +126,7 @@ plot(tcgaRes['RNA_Angio'],tcgaRes['pctPos'],\
      'RNA Angioscore', predName,'TCGA Holdout',
      xlabelColor=methodColors['RNA Angio'],yLabelColor=methodColors[predName])
 saveFile=os.path.join(saveDir,'FigS4-A2.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300)  
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)  
 
 # plot correlation between the arms
 plt.figure(figsize=(10,10))
@@ -132,4 +134,4 @@ plot(tcgaRes['Angio'],tcgaRes['pctPos'],\
       'Angio Arm Prediction',predName,'TCGA Holdout',
      xlabelColor=methodColors[predName],yLabelColor=methodColors[predName])
 saveFile=os.path.join(saveDir,'FigS4-A3.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300) 
+plt.savefig(saveFile,bbox_inches='tight',dpi=400) 

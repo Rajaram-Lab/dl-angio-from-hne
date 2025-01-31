@@ -60,9 +60,10 @@ def is_number(n):
 def plot(x,y,xlable, ylable, titleS,xlabelColor,yLabelColor):                                                                                                                 
     markerSize=10                                                                                                                                     
     fontSize=24                                                                                                                                       
+    axfontSize=18
     isGood=(np.logical_and(np.isfinite(x),np.isfinite(y)))                                                                                            
     #plt.figure(figsize=(10,10))                                                                                                                       
-    plt.plot(x[isGood],y[isGood],'ok',markersize=markerSize)                                                                                          
+    plt.plot(x[isGood],y[isGood],'ok',markersize=markerSize)                                                                            plt.tick_params(axis='both', which='major', labelsize=axfontSize)              
     plt.xlabel(xlable,fontsize=fontSize,color=xlabelColor)                                                                                                              
     plt.ylabel(ylable,fontsize=fontSize,color=yLabelColor)                                                                                                              
     corr,p=Corr(x,y)                                                                                                    

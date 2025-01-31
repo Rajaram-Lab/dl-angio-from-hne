@@ -17,7 +17,7 @@ os.environ["CUDA_VISIBLE_DEVICES"]="0"
 
 codeDir=os.path.dirname(__file__)
 homeDir = os.path.dirname(codeDir)
-
+import sys
 try: # catch error for new Singularity
    
     import openslide as oSlide
@@ -192,13 +192,13 @@ predClassesResized[np.logical_not(maskResized1)]=0
 isFg=cv2.resize(np.uint8(np.any(imgLowRes<220,axis=-1)),predClasses.shape[::-1])
 predClassesTumor=np.logical_and(predClasses,np.logical_and(maskResized,isFg))
 
-blockSize=128
+blockSize=416
 nPos=block_reduce(predClassesTumor,(blockSize,blockSize),func=np.sum)
 nTum=block_reduce(maskResized,(blockSize,blockSize),func=np.sum)
 
 fracPos=nPos/nTum
 fracPos[nTum/(blockSize*blockSize)<0.95]=np.NAN
-fracPosResized=cv2.resize(fracPos,(imgLowRes.shape[1],imgLowRes.shape[0]))
+fracPosResized=cv2.resize(fracPos,(imgLowRes.shape[1],imgLowRes.shape[0]),interpolation=cv2.INTER_NEAREST)
 
 
 # %%
@@ -245,27 +245,32 @@ for i,x in enumerate(rna_angioAll[1][:3]):
                      edgecolor=np.array(list(cmap(ecdf(x)))),facecolor=(0,0,0,0),
                      linewidth=7)        
         ax.add_patch(c)
-
+plt.vlines(np.arange(0,imgLowRes.shape[1],blockSize/8), -0.5, imgLowRes.shape[0]+0.5,linewidth=0.2,color='k')
+plt.hlines(np.arange(0,imgLowRes.shape[0],blockSize/8), -0.5, imgLowRes.shape[1]+0.5,linewidth=0.2,color='k')
+plt.xlim(0,imgLowRes.shape[1])
+plt.ylim(0,imgLowRes.shape[0])
 plt.xticks([],[])
 plt.yticks([],[])
-saveFile=os.path.join(pltSaveDir,'Fig-1C.png')
-plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+saveFile=os.path.join(pltSaveDir,'Fig-1C1.png')
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
 
 #%% Individual plots below only 3 out of 4 image pairs are used
-name='Fig1C-'
+name='Fig1C1-'
+
+rcRange=slice(500-int(blockSize/2),500+int(blockSize/2))
 for i in range(4):
     plt.figure(figsize=(10,20))    
     fontSize=10
     plt.subplot(1,2,1)
-    plt.imshow(nimgList[i])
+    plt.imshow(nimgList[i][rcRange,rcRange,:])
     plt.xticks([],[])
     plt.yticks([],[])
     plt.subplot(1,2,2)
-    plt.imshow(nimgList[i])
-    plt.imshow(maskList[i],vmin=0,vmax=1,cmap=cmap_green,alpha=alpha1)
+    plt.imshow(nimgList[i][rcRange,rcRange,:])
+    plt.imshow(maskList[i][rcRange,rcRange],vmin=0,vmax=1,cmap=cmap_green,alpha=alpha1)
     plt.xticks([],[])
     plt.yticks([],[])
     plt.tight_layout()
     figName=name+str(i)+'.png'
     saveFile=os.path.join(pltSaveDir,figName)
-    plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+    plt.savefig(saveFile,bbox_inches='tight',dpi=400)

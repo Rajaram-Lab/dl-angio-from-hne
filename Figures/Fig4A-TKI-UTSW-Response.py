@@ -69,8 +69,12 @@ dfLow=pd.DataFrame({'isObserved':patientIsObserved[isLow],
          'TNT(years)':patientDuration[isLow],
          'isAngioLow':np.ones(np.sum(isLow))})
 #%%
-plt.figure(figsize=(8,8))
-fontSize=18
+plt.figure(figsize=(10,10))
+#fontSize=18
+#axfontSize=16
+legendfontSize=22
+labelfontSize=22
+axfontSize=18
 kmf = KaplanMeierFitter()
 low_num=np.sum(isLow)
 high_num=np.sum(isHigh)
@@ -83,13 +87,15 @@ kmf.fit(dfLow['TNT(years)'],dfLow['isObserved'],label=(('Low Angio(N=')+str(low_
 ax=kmf.plot(ci_show=False,color=pointColor,
             linestyle=globalParams['Plotting']['highMedLowLineStyles']['Low'],
             linewidth=3)
-plt.xlabel('Time (Years)',fontsize=fontSize)
-plt.ylabel('Time to Next Treatment Probability',fontsize=fontSize)
+plt.tick_params(axis='both', which='major', labelsize=axfontSize)
+plt.xlabel('Time (Years)',fontsize=labelfontSize)
+plt.ylabel('Time to Next Treatment Probability',fontsize=labelfontSize)
+
 #plt.title('UTSW Cohort: Time-To-Next-Treatment Response Curves',fontsize=fontSize)
 
-plt.legend(prop={'size': fontSize})
+plt.legend(prop={'size': legendfontSize})
 saveFile=os.path.join(saveDir,'Fig4A.png')
-#plt.savefig(saveFile,bbox_inches='tight',dpi=300)
+plt.savefig(saveFile,bbox_inches='tight',dpi=400)
 plt.show()
 #%%
 dfHighLow=pd.concat([dfHigh, dfLow],axis=0)
